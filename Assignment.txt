@@ -1,0 +1,34 @@
+void main() {
+  List<double> studentsGrades = [49.8,50,99.9,84,77,65,61.5,88,89.7,53,83,69];
+  int A = 0;
+  int B = 0;
+  int C = 0;
+  int D = 0;
+  int F = 0;
+  for (double s in studentsGrades) {
+    if ( s >= 85) {
+      A++;
+    } else if (s  >=75 && s<85 ) {
+      B++;
+    } else if (s  >=65 && s<75) {
+      C++;
+    } else if (s  >=50 && s<65) {
+      D++;
+    }
+    else {
+      F++;
+    }
+  }
+  int sucess = (A + B + C + D);
+  int fail=(F);
+  double sucessRate = sucess / studentsGrades.length *100;
+  double failRate = fail / studentsGrades.length *100;
+  print("The number of students who got an ( A ) grade is ( $A ) students");
+  print("The number of students who got an ( B ) grade is ( $B ) students");
+  print("The number of students who got an ( C ) grade is ( $C ) students");
+  print("The number of students who got an ( D ) grade is ( $D ) students");
+  print("The number of students who have failed ( $F ) students");
+  print("The number of successful students ( $sucess) students");
+  print("Student success rate ( $sucessRate )");
+  print("Student fail rate ( $failRate)");
+}
